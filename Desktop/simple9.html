@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Simple Web Page</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="urlGoesHere">
+		<style>
+			/* 
+			Universal selector - select all elements of any type
+			reset all margins and paddings to 0
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			type selector - select all paragraph elements
+			p {
+				margin-bottom: 16px;
+			}*/
+			
+			/* type selector - select html element */
+			html {
+				/*font-size: 16px;
+				background-color: black;
+				color: white;*/
+			}
+			
+			/* type selector - select all paragraph elements */
+			p {
+				background-color: rgba(255,56,162,0.4);
+				/*opacity: 0.4;*/
+			}
+			
+			/* type selector - select all h1 elements */
+			h1 {
+				color: #FF38A2;
+				text-align: center;
+			}
+			
+			/* id selector - select the element with id of "firstAnchor" */
+			#firstAnchor {
+				font-weight: bold;
+			}
+			
+			/* class selector - select all elements with class of "foo" */
+			.foo {
+				font-size: 20px; /*150%;*/ /*1.5em;*/ /*20px;*/
+			}
+			
+			/* descendent selector - select all paragraph elements (even not immediate children) in divs */
+			div p {
+				font-style: italic;
+			}
+
+			/* child selector - select only immediate child paragraph elements (not grandchildren) in divs */
+			div>p {
+				border: 1px solid;
+			}
+			
+			/* adjacent sibling selector - select paragraph elements that immediately follow divs */
+			div+p {
+				font-variant: small-caps;
+			}
+			
+			/* sibling selector - select all paragraph elements that follow divs */
+			div~p {
+			}
+				
+			/* attribute selector - select all input elements with a type attribute
+			using type="submit" instead of type would only select submit buttons */
+			input[type] /*type="submit"*/{
+				background-color: green;
+			}
+			
+			/* attribute selector and pseudo class selector - 
+			select all input elements with a type attribute that have the focus */
+			input[type]:focus {
+				border: 3px solid;
+			}
+				
+			/* type selector - select all anchor elements */
+			a {
+				text-decoration: none;
+			}
+			
+			/* type selector with pseudo class selector -
+			select all anchor elements that have the mouse over them */
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			/* type selector with pseudo class selector -
+			select all anchor elements that have already been visited by the user */
+			a:visited {
+				color: gray;
+			}
+			
+			/* type selector with pseudo element selector -
+			select first letter in every element in a div */
+			div :first-letter {
+				text-transform: uppercase;
+				font-size: 3em;
+			}
+			
+			/* id selector - select element with id of "title" */
+			#title {
+				text-shadow: -2px -2px 4px black;
+			}
+			
+			/* type selector - select all h2 elements */
+			h2 {
+				margin: auto;
+				border: 1px double green;
+				width: 250px;
+				text-align: center;
+				border-radius: 2px;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- comment goes here -->
+	<h1 id="title" style="background-color: green;">My Web Page!</h1>
+	<h2>by PCS</h2>
+	<h1>&ldquo;Important&rdquo; &lt; &gt; &copy;"Stuff"</h1>
+	<header>
+		This &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is <i>text</i> <em>in</em> an <div>HTML</div> document
+		<p lang="he" dir="rtl">עברית text goes here</p>
+	</header>
+	<a id="firstAnchor" href="http://www.google.com">Google</a>
+	<a class="foo" href="simple2.html">2nd page</a>
+	<a class="foo" href="morePages/simple3.html">3rd page</a>
+	<a href="/index.html">Apache root 
+		<img src="/apache_pb.png" height="100px" width="300px" alt="apache">
+	</a>
+	
+	<div>
+		<p>stuff goes here</p>
+		<p>more <b>stuff</b> <strong>goes</strong> here</p>
+		<p>even more stuff <span>goes</span> here</p>
+		<span><p>I'm in a span</p></span>
+		<p>back in div</p>
+	</div>
+	<p>not in a div<p>
+	<input type="text" value="hello"/>
+	<input type="submit">
+	<div>
+	<div><span>Apache web server is great<span><img src="/apache_pb.png" height="100px" width="300px" alt="apache"></div>
+	<ul>
+	<li><a href="http://www.google.com">google</a></li>
+	<li><a href="http://www.microsoft.com">microsoft</a></li>
+	</ul>
+	<ol>
+	<li>Write HTML</li>
+	<li>Write CSS</li>
+	<li>Write JavaScript</li>
+	
+	</ol>
+	</div>
+	<!--<marquee>hello from pcs <img src="/apache_pb.png" height="100px" width="300px" alt="apache"></marquee>-->
+	</body>
+</html>
